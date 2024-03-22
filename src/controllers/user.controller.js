@@ -220,9 +220,9 @@ export default class UserController {
 
       await sendPasswordResetEmail(user._id, user.email, user.name);
 
-      res.status(200).render("forgotPassword", {
+      res.status(200).render("signin", {
         error: null,
-        userData: { email: email },
+        userData: { email: email, name: null, password: null },
         successMessage:
           "Password reset link successfully sent to your mail address",
       });
