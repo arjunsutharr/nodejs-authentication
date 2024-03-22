@@ -1,6 +1,6 @@
 # Nodejs Authentication System
 
-A complete authentication system which can be used as a starter code for creating any new application
+A complete authentication system which can be used as a starter code for creating any new application.
 
 [Demo](https://nodejs-authentication-joud.onrender.com): https://nodejs-authentication-joud.onrender.com
 
@@ -126,7 +126,8 @@ To run the project locally, follow these steps:
      - GOOGLE_CLIENT_ID: Your Google Client ID for Google Sign-In
      - GOOGLE_CLIENT_SECRET: Your Google Client Secret for Google Sign-In
 
-4. Start the server: `node app.js` 5. Visit `http://localhost:3000` in your browser to access the application.
+4. Start the server: `node app.js`
+5. Visit (`http://localhost:3000` or the port specified in your .env file) in your browser to access the application.
 
 ## Security Considerations
 
