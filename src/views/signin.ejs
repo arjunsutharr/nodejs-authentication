@@ -1,0 +1,104 @@
+<div
+  class="container d-flex sign-container justify-content-center align-items-center w-100"
+>
+  <% if(error) { %>
+  <div
+    class="alert position-absolute mt-4 top-0 alert-danger alert-dismissible fade show"
+    role="alert"
+  >
+    <% error.forEach((error) => { %>
+    <li><%= error.msg %></li>
+    <%}) %>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div>
+  <% } %>
+  <!--  -->
+  <% if(successMessage) { %>
+  <div
+    class="alert position-absolute mt-4 top-0 alert-success alert-dismissible fade show"
+    role="alert"
+  >
+    <li><%= successMessage %></li>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div>
+  <% } %>
+
+  <div class="card pt-2 px-3 shadow shadow-lg" style="width: 23rem">
+    <div class="card-body">
+      <h2 class="card-title mb-4">Sign in</h2>
+
+      <form action="/user/signin" method="post">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Email address</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            name="email"
+            value="<%= userData.email %>"
+            aria-describedby="emailHelp"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            id="exampleInputPassword1"
+          />
+        </div>
+
+        <a
+          href="/user/forgotPassword"
+          class="card-link link-dark link-opacity-75 link-opacity-100-hover link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0"
+          >Forgot password?</a
+        >
+
+        <div
+          class="g-recaptcha mt-3"
+          data-sitekey="<%= process.env.RECAPTCHA_SITE_KEY %>"
+        ></div>
+
+        <div class="d-flex justify-content-between align-items-baseline mt-4">
+          <a
+            href="/user/signup"
+            class="card-link link-dark link-opacity-75 link-opacity-100-hover link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0"
+            >Create account</a
+          >
+          <button type="submit" class="btn btn-dark">Sign in</button>
+        </div>
+      </form>
+
+      <p class="my-4 text-center">----------------- or -----------------</p>
+
+      <input type="hidden" name="googleId" id="googleId" value="" />
+      <div class="alert alert-link py-0 text-center" role="alert">
+        <a
+          href="/user/google"
+          class="link-secondary link-underline link-underline-opacity-0"
+        >
+          <img
+            src="/images/google.svg"
+            height="23px"
+            alt="google icon"
+            class="me-1"
+          />
+          Sign in with google
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
