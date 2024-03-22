@@ -1,7 +1,6 @@
 # Nodejs Authentication System
 
-A complete authentication system which can be used as a starter code for creating any new
-application
+A complete authentication system which can be used as a starter code for creating any new application
 
 [Demo](https://nodejs-authentication-joud.onrender.com): https://nodejs-authentication-joud.onrender.com
 
