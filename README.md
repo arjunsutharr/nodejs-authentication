@@ -3,7 +3,7 @@
 A complete authentication system which can be used as a starter code for creating any new
 application
 
-[Demo]()
+[Demo](https://nodejs-authentication-joud.onrender.com): https://nodejs-authentication-joud.onrender.com
 
 ## Table of Contents
 
@@ -106,7 +106,7 @@ The project follows a structured folder organization:
 
 To run the project locally, follow these steps:
 
-1. Clone the repository: `git clone `
+1. Clone the repository: `git clone https://github.com/arjunsutharr/nodejs-authentication`
 2. Install dependencies: `npm install`
 3. Configure environment variables.
 
