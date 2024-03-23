@@ -125,6 +125,7 @@ To run the project locally, follow these steps:
      - PASSWORD_RESET_BASE_LINK: (eg. http://localhost:3000/user/newPassword)
      - GOOGLE_CLIENT_ID: Your Google Client ID for Google Sign-In
      - GOOGLE_CLIENT_SECRET: Your Google Client Secret for Google Sign-In
+     - GOOGLE_REDIRECT_URI=/user/google/callback
 
 4. Start the server: `node app.js`
 5. Visit (`http://localhost:3000` or the port specified in your .env file) in your browser to access the application.
